@@ -5955,3 +5955,8 @@ h6,
     transform: rotate(360deg);
   }
 }
+
+/* Ajuste móvil: tablas con más aire */
+@media (max-width: 767px) {
+  .table-responsive .table th, .table-responsive .table td { padding: 12px 14px; white-space: nowrap; }
+}
