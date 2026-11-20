@@ -168,3 +168,16 @@ legend, .campo label { font-size: .9rem; font-weight: 600; padding: 0; margin-bo
 .exito {
   min-height: 1.3em; margin: 0 0 14px; font-size: .92rem; font-weight: 500; color: #1a8f4c;
 }
+
+/* Ajuste móvil: evita scroll horizontal en el login */
+.roles { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.rol { min-width: 0; }
+@media (max-width: 899.98px) { .pagina { grid-template-columns: minmax(0, 1fr); } }
+@media (max-width: 480px) {
+  .acceso { padding: 28px 18px 24px; }
+  .opcion { padding: 12px 10px; gap: 8px; font-size: .9rem; }
+}
+@media (max-width: 360px) {
+  .opcion svg { display: none; }
+  .opcion { padding: 12px 8px; gap: 6px; font-size: .85rem; }
+}
