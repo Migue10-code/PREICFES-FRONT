@@ -1,0 +1,96 @@
+/* assets/css/chat.css — asistente de estudio (chatbot) de PREICFES */
+.pf-chat-btn {
+  position: fixed; right: 24px; bottom: 24px; z-index: 1050;
+  width: 62px; height: 62px; padding: 0;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; background: #1f45d6; border: 0; border-radius: 50%; cursor: pointer;
+  box-shadow: 0 10px 28px rgba(10, 31, 102, .35);
+  transition: background-color .15s, transform .15s;
+}
+.pf-chat-btn:hover { background: #1636a8; transform: translateY(-2px); }
+.pf-chat-btn:focus-visible { outline: 3px solid #9db4ff; outline-offset: 3px; }
+.pf-chat-btn svg { width: 28px; height: 28px; }
+.pf-chat-btn .pf-punto {
+  position: absolute; top: 6px; right: 6px; width: 14px; height: 14px;
+  background: #ffd23f; border: 2px solid #fff; border-radius: 50%;
+}
+
+.pf-chat {
+  position: fixed; right: 24px; bottom: 100px; z-index: 1050;
+  width: 380px; max-width: calc(100vw - 24px); height: 540px; max-height: calc(100vh - 124px);
+  display: none; flex-direction: column; overflow: hidden;
+  font-family: inherit; color: #12183a; background: #fff;
+  border: 1px solid #d5dbea; border-radius: 18px;
+  box-shadow: 0 24px 60px rgba(10, 31, 102, .28);
+}
+.pf-chat.pf-abierto { display: flex; }
+
+.pf-chat-cabecera {
+  display: flex; align-items: center; gap: 12px; padding: 14px 14px 14px 18px;
+  color: #fff; background: #0a1f66;
+}
+.pf-chat-cabecera .pf-titulo { flex: 1; min-width: 0; }
+.pf-chat-cabecera strong { display: block; font-size: 1rem; line-height: 1.2; }
+.pf-chat-cabecera span { display: block; font-size: .8rem; color: #c9d2f3; }
+.pf-icono {
+  width: 40px; height: 40px; flex: none; display: flex; align-items: center; justify-content: center;
+  color: #0a1f66; background: #ffd23f; border-radius: 50%; font-weight: 800; font-size: .95rem;
+}
+.pf-chat-cabecera button {
+  width: 36px; height: 36px; padding: 0; flex: none;
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; background: transparent; border: 0; border-radius: 8px; cursor: pointer;
+}
+.pf-chat-cabecera button:hover { background: rgba(255, 255, 255, .14); }
+.pf-chat-cabecera button:focus-visible { outline: 3px solid #9db4ff; }
+.pf-chat-cabecera svg { width: 20px; height: 20px; }
+
+.pf-mensajes {
+  flex: 1; overflow-y: auto; padding: 16px; background: #f6f8ff;
+  display: flex; flex-direction: column; gap: 10px;
+}
+.pf-msg {
+  max-width: 86%; padding: 10px 14px; font-size: .95rem; line-height: 1.5;
+  border-radius: 14px; word-wrap: break-word; overflow-wrap: anywhere;
+}
+.pf-msg.pf-usuario { align-self: flex-end; color: #fff; background: #1f45d6; border-bottom-right-radius: 4px; }
+.pf-msg.pf-bot { align-self: flex-start; color: #12183a; background: #fff; border: 1px solid #d5dbea; border-bottom-left-radius: 4px; }
+.pf-msg.pf-error { align-self: flex-start; color: #b42318; background: #fff; border: 1px solid #f1b5af; border-bottom-left-radius: 4px; }
+.pf-msg code { padding: 1px 5px; font-size: .9em; background: #eef2ff; border-radius: 4px; }
+.pf-msg.pf-usuario code { background: rgba(255, 255, 255, .2); }
+
+.pf-escribiendo { display: inline-flex; gap: 5px; padding: 14px 16px; }
+.pf-escribiendo i { width: 7px; height: 7px; background: #98a0b8; border-radius: 50%; animation: pf-salto 1s infinite ease-in-out; }
+.pf-escribiendo i:nth-child(2) { animation-delay: .15s; }
+.pf-escribiendo i:nth-child(3) { animation-delay: .3s; }
+@keyframes pf-salto { 0%, 60%, 100% { transform: translateY(0); opacity: .5; } 30% { transform: translateY(-5px); opacity: 1; } }
+@media (prefers-reduced-motion: reduce) { .pf-escribiendo i { animation: none; } }
+
+.pf-sugerencias { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 4px; }
+.pf-sugerencias button {
+  padding: 8px 12px; font: inherit; font-size: .85rem; color: #1636a8; text-align: left;
+  background: #fff; border: 1.5px solid #b3bfe6; border-radius: 999px; cursor: pointer;
+}
+.pf-sugerencias button:hover { background: #eef2ff; border-color: #1f45d6; }
+.pf-sugerencias button:focus-visible { outline: 3px solid #9db4ff; }
+
+.pf-form { display: flex; gap: 8px; padding: 12px; background: #fff; border-top: 1px solid #d5dbea; }
+.pf-form input {
+  flex: 1; min-width: 0; height: 46px; padding: 0 14px; font: inherit; font-size: .95rem; color: #12183a;
+  background: #fff; border: 1.5px solid #d5dbea; border-radius: 12px;
+}
+.pf-form input:focus { outline: none; border-color: #1f45d6; box-shadow: 0 0 0 4px rgba(31, 69, 214, .14); }
+.pf-form button {
+  width: 46px; height: 46px; padding: 0; flex: none; display: flex; align-items: center; justify-content: center;
+  color: #fff; background: #1f45d6; border: 0; border-radius: 12px; cursor: pointer;
+}
+.pf-form button:hover:not(:disabled) { background: #1636a8; }
+.pf-form button:disabled { opacity: .5; cursor: not-allowed; }
+.pf-form button:focus-visible { outline: 3px solid #9db4ff; outline-offset: 2px; }
+.pf-form button svg { width: 20px; height: 20px; }
+.pf-aviso { margin: 0; padding: 0 14px 10px; font-size: .72rem; color: #5b6480; text-align: center; background: #fff; }
+
+@media (max-width: 480px) {
+  .pf-chat-btn { right: 16px; bottom: 16px; }
+  .pf-chat { right: 12px; bottom: 90px; height: min(78vh, 560px); }
+}
