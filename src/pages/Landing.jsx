@@ -228,22 +228,14 @@ export default function Landing() {
               <span className="chip"><i className="mdi mdi-lightbulb"></i> Nosotros</span>
               <h2>¿Qué es PREICFES y cómo surgió?</h2>
             </div>
-            <div className="nosotros">
+                        <div className="nosotros">
               <div>
                 <h3>La idea</h3>
                 <p>PREICFES nació como proyecto de grado, de la necesidad de tener un lugar sencillo y gratuito para practicar el examen Saber 11 por áreas, sin depender de hojas impresas ni de plataformas complicadas. La idea es que cualquier estudiante pueda entrar, resolver un simulacro y ver en qué áreas debe reforzar más.</p>
-                <h3>Cómo funciona por dentro</h3>
-                <p>La plataforma organiza las preguntas por las cinco áreas del examen, guarda los resultados de cada simulacro y le muestra al estudiante su progreso a lo largo del tiempo, para que la práctica tenga un propósito claro.</p>
               </div>
               <div>
-                <h3>El equipo</h3>
-                <p>Los desarrolladores de este proyecto son: Miguel Ángel Giraldo Orrego, Oswaldo Suescun Acevedo, Mateo Mazo Rodas, Daniel felipe Perea Duque</p>
-                <div className="equipo">
-                  <div className="persona">
-                    <span className="avatar">TN</span>
-                    <div><div className="nombre">PREICFES</div><div className="rol">Grado 11 · Desarrolladores de PREICFES</div></div>
-                  </div>
-                </div>
+                <h3>Cómo funciona por dentro</h3>
+                <p>La plataforma organiza las preguntas por las cinco áreas del examen, guarda los resultados de cada simulacro y le muestra al estudiante su progreso a lo largo del tiempo, para que la práctica tenga un propósito claro.</p>
               </div>
             </div>
           </div>
